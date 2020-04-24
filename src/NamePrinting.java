@@ -1,10 +1,12 @@
+
 public class NamePrinting implements Runnable{
 	
 	
 	private String name;
-	
+	private int i =0;
 	public NamePrinting(String name) {
 		this.name  = name;
+		i=0;
 	}
 	
 	
@@ -13,8 +15,8 @@ public class NamePrinting implements Runnable{
 	}
 	
 	public void print() {
-		for(int i =0; i< 100; i++) {
-			System.out.println(name);
+		for(; i< 10000; i++) {
+			System.out.println(name+" "+ Thread.currentThread().getName());
 		}
 	}
 
